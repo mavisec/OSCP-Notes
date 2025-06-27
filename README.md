@@ -996,7 +996,7 @@ if error jumps during download try:
 $ProgressPreference = "SilentlyContinue"
 -UseBasicParsing (required -Outfile)
 ```
-
+### SeImpersonatePrivilege
 ### Potatoes
 
 **JuicyPotatoNG**
