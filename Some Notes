@@ -1,0 +1,6 @@
+scan everything.
+use the given creds for evil-winrm ---> use nxc to spray in almost everything
+once you got the shell use whoami /priv use winpeas you will def find smth.
+after you are NT/ authority on the first machine use mimikatz to dump logonpasswords.
+and use those hashes to spray onto the next machine. repeat the process find an interesting file there must be something check for internally running ports.
+and same if you are NT/authority there get mimikatz get those hashes get a stable shell maybe try to get all the username and hashes you gathered spray it on DC01 atleast you can get a shell on a low level user and then go for DC01 use bloodhound and yes here we are done with active directory
