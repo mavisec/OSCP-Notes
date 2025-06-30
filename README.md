@@ -1324,6 +1324,10 @@ nxc winrm 172.16.212.11 -u users -p pass --continue-on-success
 ```
 
 ```jsx
+nxc smb 172.16.212.13 -u users -p pass --continue-on-success
+```
+
+```jsx
 netexec smb 192.168.226.172 -u anirudh -p SecureHM --shares
 ```
 
