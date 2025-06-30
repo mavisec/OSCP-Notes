@@ -1316,6 +1316,12 @@ RETURN p
 ```jsx
 kerbrute -domain hutch.offsec -users ./users.txt -dc-ip 192.168.219.122
 ```
+```jsx
+nxc winrm 172.16.212.11 -u users -p hashes --continue-on-success
+```
+```jsx
+nxc winrm 172.16.212.11 -u users -p pass --continue-on-success
+```
 
 ```jsx
 netexec smb 192.168.226.172 -u anirudh -p SecureHM --shares
