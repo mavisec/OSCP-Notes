@@ -4,3 +4,34 @@ once you got the shell use whoami /priv use winpeas you will def find smth.
 after you are NT/ authority on the first machine use mimikatz to dump logonpasswords.
 and use those hashes to spray onto the next machine. repeat the process find an interesting file there must be something check for internally running ports.
 and same if you are NT/authority there get mimikatz get those hashes get a stable shell maybe try to get all the username and hashes you gathered spray it on DC01 atleast you can get a shell on a low level user and then go for DC01 use bloodhound and yes here we are done with active directory
+
+
+________________________________________________________________________________________________________________________________________________________________
+
+Let's discuss some small methodology on what to do that will not only work for the current machine but the entire challenge lab:
+
+For the enumeration part, you may try the followings:
+1) Enumerating Objects
+Users and their attributes
+An example of attribute would be the "do not require kerberos preauth" (as-reproasting)
+Groups
+Groupmembership for each user
+GPO
+ACL
+Computers
+SPNs:  If there is a user that the SPN attribute is not null. Meaning, the user account is being used as a service account. (kerberoasting)
+
+2) Map the enumerated objects
+Compile a list of objects: Users, groups, etc
+Hunt Logged on users to see where high value logged in and make your way to root those machines
+Enumeration recycle with any new user you compromise.
+
+Tools: Powerview, Bloodhound, PsloggedON
+
+This was for the enumeration. Armed with the above, you should now focus on the attacks covered in the course material:
+1) Password spraying: You have a list of users and you discovered some passwords. Put them both in a list and spray it out. Maybe there is a password re-used somewhere.
+2) AS-REP Roasting
+3) Kerberoasting
+
+This should not be the only things you should check for. What I shared was a very minimal methodology.
+#sample-AD-methodology
