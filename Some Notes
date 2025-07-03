@@ -36,5 +36,7 @@ This was for the enumeration. Armed with the above, you should now focus on the 
 This should not be the only things you should check for. What I shared was a very minimal methodology.
 #sample-AD-methodology
 
-__________________________________-
+__________________________________
 along with /tmp /dev/shm is also writeable by everyone
+_____________________________________
+deleted .htaccess in ritecms cuz was not able to access reverse shell
