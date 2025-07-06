@@ -746,6 +746,7 @@ root2:{HASH}:0:0:root:/root:/bin/bash
 whoami
 whoami /priv
 whoami /groups
+findstr /SIM /C:"pass" *.ini *.cfg *.xml
 net user
 Get-LocalUser
 net user steve
