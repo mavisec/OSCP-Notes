@@ -1099,7 +1099,10 @@ Get-NetUser -UACFilter NOT_ACCOUNTDISABLE | select samaccountname, description, 
 
 Invoke-ACLScanner -ResolveGUIDs | select IdentityReferenceName, ObjectDN, ActiveDirectoryRights | fl
 Find-InterestingDomainAcl -ResolveGUIDs
+Get-NetGPO
 Get-GPO -Guid 31B2F340-016D-11D2-945F-00C04FB984F9
+Evil-WinRM PS C:\Users\anirudh\Desktop> $path = "\vault.offsec\sysvol\vault.offsec\Policies{31B2F340-016D-11D2-945F-00C04FB984F9}"
+Evil-WinRM PS C:\Users\anirudh\Desktop> Get-Acl $path | Format-List
 
 ```
 
